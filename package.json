@@ -1,7 +1,7 @@
 {
-  "name": "string-utils",
-  "version": "1.0.0",
-  "description": "",
+  "name": "light-string-utils",
+  "version": "1.1.0",
+  "description": "A lightweight utilities on strings",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage"
@@ -14,5 +14,12 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "29.5.0"
-  }
+  },
+  "keywords": [
+    "string",
+    "utils",
+    "string-utils",
+    "string-utils-light",
+    "string-utils-lightweight"
+  ]
 }
