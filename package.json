@@ -8,12 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-sanjeevkse:sanjeevkse/string-utils.git"
+    "url": "git+https://github.com/sanjeevkse/light-string-utils.git"
   },
   "author": "Sanjeev Shetty <sanjeevkse@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "29.5.0"
+    "benchmark": "2.1.4",
+    "jest": "29.5.0",
+    "microtime": "3.1.1"
   },
   "keywords": [
     "string",
@@ -21,5 +23,6 @@
     "string-utils",
     "string-utils-light",
     "string-utils-lightweight"
-  ]
+  ],
+  "homepage": "https://github.com/sallar/stringz#readme"
 }
