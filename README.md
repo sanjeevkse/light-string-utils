@@ -10,10 +10,6 @@ A light weight utility collection on string having size of < 1k (gzipped: 447)
 $ npm install light-string-utils --save
 ```
 
-## Found a bug?
-
-As its an early release, there might be some bugs. Please feel free to open an issue [here](https://github.com/sanjeevkse/light-string-utils/issues)
-
 ## Usage
 
 <!--
