@@ -1,8 +1,8 @@
-const length = require("./length");
-const limit = require("./limit");
-const toArray = require("./toArray");
-const subString = require("./subString");
-const abbreviate = require("./abbreviate");
+const length = require("../src/length");
+const limit = require("../src/limit");
+const toArray = require("../src/toArray");
+const subString = require("../src/subString");
+const abbreviate = require("../src/abbreviate");
 
 describe("function length", () => {
   test("`Mango` length should be `5`", () => {
