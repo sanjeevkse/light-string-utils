@@ -3,11 +3,11 @@ function abbreviate(str) {
     throw new Error("Invalid string served");
   }
 
+  str = str.trim();
+
   if (str === "") {
     return "";
   }
-
-  str = str.trim();
 
   let words = str.split(" ");
   let result = "";

@@ -3,6 +3,9 @@ const limit = require("../src/limit");
 const toArray = require("../src/toArray");
 const subString = require("../src/subString");
 const abbreviate = require("../src/abbreviate");
+const center = require("../src/center");
+const isAlpha = require("../src/isAlpha");
+const isAlNum = require("../src/isAlNum");
 
 describe("function length", () => {
   test("`Mango` length should be `5`", () => {
@@ -110,11 +113,111 @@ describe("abbreviate()", () => {
     expect(abbreviate("Main theme allowing")).toBe("Mta");
   });
 
-  // test("Test that the function correctly handles empty input", () => {
-  //   expect(abbreviate("").toBe(""));
-  // });
+  test("Test that the function correctly handles empty input", () => {
+    expect(abbreviate("")).toBe("");
+  });
 
-  // test("Test that the function correctly handles input with only spaces", () => {
-  //   expect(abbreviate("   ")).toBe("");
-  // });
+  test("Test that the function correctly handles input with only spaces", () => {
+    expect(abbreviate("   ")).toBe("");
+  });
+});
+
+describe("center()", () => {
+  test("Test that the function returns a string", () => {
+    expect(typeof center("test")).toBe("string");
+  });
+
+  test("Test that the function throws an error if an invalid input is provided", () => {
+    expect(() => center(null)).toThrow(Error);
+    expect(() => center(undefined)).toThrow(Error);
+    expect(() => center(123)).toThrow(Error);
+  });
+
+  test("Test that the function correctly centers a single word", () => {
+    expect(center("test")).toBe("test");
+    expect(center("testing", 20, "@@")).toBe(
+      "@@@@@@@@@@@@testing@@@@@@@@@@@@@@"
+    );
+    expect(center("testing", 10)).toBe(" testing  ");
+  });
+
+  test("Test that the function correctly handles empty input", () => {
+    expect(center("")).toBe("");
+  });
+
+  test("Test that the function correctly handles input with only spaces", () => {
+    expect(center("   ")).toBe("   ");
+  });
+});
+
+describe("isAlpha()", () => {
+  test("Test that the function returns a boolean", () => {
+    expect(typeof isAlpha("test")).toBe("boolean");
+  });
+
+  test("Test that the function false for an invalid input is provided", () => {
+    expect(isAlpha(null)).toBe(false);
+    expect(isAlpha(undefined)).toBe(false);
+    expect(isAlpha(123)).toBe(false);
+  });
+
+  test("Test that the function correctly identifies alphabetic strings", () => {
+    expect(isAlpha("test")).toBe(true);
+    expect(isAlpha("test123")).toBe(false);
+    expect(isAlpha("123")).toBe(false);
+  });
+
+  test("Test that the function correctly identifies non-alphabetic strings", () => {
+    expect(isAlpha("test!")).toBe(false);
+    expect(isAlpha("test123!")).toBe(false);
+    expect(isAlpha("123!")).toBe(false);
+  });
+
+  test("Test that the function correctly handles empty input", () => {
+    expect(isAlpha("")).toBe(false);
+  });
+
+  test("Test that the function correctly handles input with only spaces", () => {
+    expect(isAlpha("   ")).toBe(false);
+  });
+
+  test("Test that the function correctly handles input with only numbers", () => {
+    expect(isAlpha("123")).toBe(false);
+  });
+
+  test("Test that the function correctly handles input with only special characters", () => {
+    expect(isAlpha("!@#$%^&*()_+")).toBe(false);
+  });
+});
+
+describe("isAlNum()", () => {
+  test("Test that the function returns a boolean", () => {
+    expect(typeof isAlNum("test")).toBe("boolean");
+  });
+
+  test("Test that the function for invalid input is provided", () => {
+    expect(isAlNum(null)).toBe(false);
+    expect(isAlNum(undefined)).toBe(false);
+  });
+
+  test("Test that the function correctly identifies alphanumeric strings", () => {
+    expect(isAlNum("test")).toBe(true);
+    expect(isAlNum("test123")).toBe(true);
+    expect(isAlNum("123")).toBe(true);
+    expect(isAlNum(123)).toBe(true);
+  });
+
+  test("Test that the function correctly identifies non-alphanumeric strings", () => {
+    expect(isAlNum("test!")).toBe(false);
+    expect(isAlNum("test123!")).toBe(false);
+    expect(isAlNum("123!")).toBe(false);
+  });
+
+  test("Test that the function correctly handles empty input", () => {
+    expect(isAlNum("")).toBe(false);
+  });
+
+  test("Test that the function correctly handles input with only spaces", () => {
+    expect(isAlNum("   ")).toBe(false);
+  });
 });
