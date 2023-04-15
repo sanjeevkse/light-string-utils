@@ -55,8 +55,9 @@ Abbreviates a string by returning the first character of each word.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The input string to be abbreviated. |
+| Name | Type     | Default | Description                         |
+| ---- | -------- | ------- | ----------------------------------- |
+| str  | {string} | _none_  | The input string to be abbreviated. |
 
 ### Returns
 
@@ -76,8 +77,9 @@ Capitalizes the first letter of a string and converts the rest to lowercase.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The input string to be capitalized. |
+| Name | Type     | Default | Description                         |
+| ---- | -------- | ------- | ----------------------------------- |
+| str  | {string} | _none_  | The input string to be capitalized. |
 
 ### Returns
 
@@ -100,8 +102,9 @@ Center aligns the given string within a new string of the specified length, padd
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to center align. |
+| Name | Type     | Default | Description                 |
+| ---- | -------- | ------- | --------------------------- |
+| str  | {string} | _none_  | The string to center align. |
 
 | totalStringLength | {number} | _none_ | The total length of the resulting string. |
 
@@ -124,8 +127,9 @@ De-capitalizes the first letter of a string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to de |
+| Name | Type     | Default | Description      |
+| ---- | -------- | ------- | ---------------- |
+| str  | {string} | _none_  | The string to de |
 
 ### Returns
 
@@ -145,8 +149,9 @@ Checks if a string ends with the specified substring.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to center align. |
+| Name | Type     | Default | Description                 |
+| ---- | -------- | ------- | --------------------------- |
+| str  | {string} | _none_  | The string to center align. |
 
 | compareSubString | {string} | _none_ | The substring to compare. |
 
@@ -169,8 +174,9 @@ Checks if two strings are equal ignoring the case.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str1 | {string} | _none_ | The first string to compare. |
+| Name | Type     | Default | Description                  |
+| ---- | -------- | ------- | ---------------------------- |
+| str1 | {string} | _none_  | The first string to compare. |
 
 | str2 | {string} | _none_ | The second string to compare. |
 
@@ -193,8 +199,9 @@ Escapes HTML characters.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to escape. |
+| Name | Type     | Default | Description           |
+| ---- | -------- | ------- | --------------------- |
+| str  | {string} | _none_  | The string to escape. |
 
 ### Returns
 
@@ -215,8 +222,9 @@ Returns the first character of a string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to get the first character from. |
+| Name | Type     | Default | Description                                 |
+| ---- | -------- | ------- | ------------------------------------------- |
+| str  | {string} | _none_  | The string to get the first character from. |
 
 | characterCount | {number} | 1 | The number of characters to return. |
 
@@ -249,8 +257,9 @@ Checks if the string contains only alphanumeric characters.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to check. |
+| Name | Type     | Default | Description          |
+| ---- | -------- | ------- | -------------------- |
+| str  | {string} | _none_  | The string to check. |
 
 ### Returns
 
@@ -271,8 +280,9 @@ Checks if the string contains only alphanumeric characters.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to check. |
+| Name | Type     | Default | Description          |
+| ---- | -------- | ------- | -------------------- |
+| str  | {string} | _none_  | The string to check. |
 
 ### Returns
 
@@ -293,8 +303,9 @@ Returns the last character of a string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to get the last character from. |
+| Name | Type     | Default | Description                                |
+| ---- | -------- | ------- | ------------------------------------------ |
+| str  | {string} | _none_  | The string to get the last character from. |
 
 | characterCount | {number} | 1 | The number of characters to return. |
 
@@ -317,8 +328,9 @@ Returns the length of a string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to get the length of a string. |
+| Name | Type     | Default | Description                               |
+| ---- | -------- | ------- | ----------------------------------------- |
+| str  | {string} | _none_  | The string to get the length of a string. |
 
 ### Returns
 
@@ -338,8 +350,9 @@ Limits the length of a string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to limit. |
+| Name | Type     | Default | Description          |
+| ---- | -------- | ------- | -------------------- |
+| str  | {string} | _none_  | The string to limit. |
 
 | strLimit | {number} | _none_ | The limit of the string. |
 
@@ -365,8 +378,9 @@ Pads a string with another string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to pad. |
+| Name | Type     | Default | Description        |
+| ---- | -------- | ------- | ------------------ |
+| str  | {string} | _none_  | The string to pad. |
 
 | side | {string} | _none_ | The side to pad the string (left | right | both). |
 
@@ -391,8 +405,9 @@ Replaces all the occurrences of a string with another string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to replace. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to replace. |
 
 | searchReplaceObj | {string} | _none_ | The object containing the search and replace strings. |
 
@@ -418,8 +433,9 @@ Converts a string to sentence case.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
 
 ### Returns
 
@@ -438,8 +454,9 @@ Converts a string to a slug.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
 
 ### Returns
 
@@ -459,8 +476,9 @@ Returns a substring of a string.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to get the substring from. |
+| Name | Type     | Default | Description                           |
+| ---- | -------- | ------- | ------------------------------------- |
+| str  | {string} | _none_  | The string to get the substring from. |
 
 | start | {number} | 0 | The index to start the substring from. |
 
@@ -485,8 +503,9 @@ Converts a string to title case.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
 
 ### Returns
 
@@ -505,8 +524,9 @@ Converts a string to an array.
 
 ### Parameters
 
-| Name | Type | Default | Description |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
 
 | explodeBy | {string} | "" | The separator to use. |
 
