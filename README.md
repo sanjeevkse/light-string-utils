@@ -1,8 +1,17 @@
 # Light String Utils
 
-<!-- [![npm](https://img.shields.io/npm/dm/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils) -->
+[![npm](https://img.shields.io/npm/v/light-string-utils.svg?orange=blue)](https://www.npmjs.com/package/light-string-utils)
+[![npm](https://img.shields.io/npm/l/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils)
+[![npm](https://img.shields.io/npm/dm/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils)
 
-A light weight utility collection on string having size of < 1k (gzipped: 447)
+A light weight utility collection on string. Without any external dependencies.
+
+Happy coding!
+
+# Found any bugs/features?
+
+Please feel free to open an issue. I shall be happy to help soon.
+[Click here](https://github.com/sanjeevkse/light-string-utils/issues)
 
 ## Install
 
