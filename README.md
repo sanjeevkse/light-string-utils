@@ -35,9 +35,8 @@ const { length } = require("ltStringUtils");
 - [`equalsIgnoreCase()`](#equalsIgnoreCase)
 - [`escapeHTML()`](#escapeHTML)
 - [`first()`](#first)
-- [`undefined()`](#undefined)
 - [`isAlNum()`](#isAlNum)
-- [`isAlNum()`](#isAlNum)
+- [`isAlpha()`](#isAlpha)
 - [`last()`](#last)
 - [`length()`](#length)
 - [`limit()`](#limit)
@@ -241,16 +240,6 @@ first("test"); // Returns "t"
 first("Hello World", 2); // Returns "He"
 ```
 
-## undefined
-
-undefined
-
-### Parameters
-
-### Returns
-
-### Examples
-
 ## isAlNum
 
 Checks if the string contains only alphanumeric characters.
@@ -274,7 +263,7 @@ isAlNum("HelloWorld123"); // Returns true
 isAlNum("Hello World123"); // Returns false
 ```
 
-## isAlNum
+## isAlpha
 
 Checks if the string contains only alphanumeric characters.
 
@@ -291,10 +280,10 @@ Checks if the string contains only alphanumeric characters.
 ### Examples
 
 ```js
-isAlNum("Hello World"); // Returns false
-isAlNum("HelloWorld"); // Returns true
-isAlNum("HelloWorld123"); // Returns true
-isAlNum("Hello World123"); // Returns false
+isAlpha("Hello World"); // Returns false
+isAlpha("HelloWorld"); // Returns true
+isAlpha("HelloWorld123"); // Returns false
+isAlpha("Hello World123"); // Returns false
 ```
 
 ## last
