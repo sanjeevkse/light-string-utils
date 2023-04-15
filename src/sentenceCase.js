@@ -1,3 +1,12 @@
+/**
+ * @name sentenceCase
+ * @description Converts a string to sentence case.
+ * @param {string} str - _none_ - The string to convert.
+ * @returns {string} - The converted string.
+ * @example sentenceCase("hello world"); // Returns "Hello world"
+ * @example sentenceCase("hello world."); // Returns "Hello world."
+ */
+
 function sentenceCase(str) {
   return str
     .toLowerCase()

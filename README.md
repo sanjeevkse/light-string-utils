@@ -22,14 +22,22 @@ import { limit, substring, length, substr } from 'light-string-utils';
 ```javascript
 // CommonJS
 const ltStringUtils = require("light-string-utils"); // OR:
-const { length, limit, subString, toArray } = require("ltStringUtils");
+const { length } = require("ltStringUtils");
 ```
+
+[//]: START GENERATED CODE
 
 - [`abbreviate()`](#abbreviate)
 - [`capitalize()`](#capitalize)
+- [`center()`](#center)
 - [`deCapitalize()`](#deCapitalize)
+- [`endsWith()`](#endsWith)
+- [`equalsIgnoreCase()`](#equalsIgnoreCase)
 - [`escapeHTML()`](#escapeHTML)
 - [`first()`](#first)
+- [`undefined()`](#undefined)
+- [`isAlNum()`](#isAlNum)
+- [`isAlNum()`](#isAlNum)
 - [`last()`](#last)
 - [`length()`](#length)
 - [`limit()`](#limit)
@@ -37,241 +45,483 @@ const { length, limit, subString, toArray } = require("ltStringUtils");
 - [`replaceBy()`](#replaceBy)
 - [`sentenceCase()`](#sentenceCase)
 - [`slugify()`](#slugify)
-- [`subString()`](#substring)
+- [`subString()`](#subString)
 - [`titleCase()`](#titleCase)
-- [`toArray()`](#toarray)
+- [`toArray()`](#toArray)
 
-### Abbreviate
+## abbreviate
 
-    function abbreviate(str)
+Abbreviates a string by returning the first character of each word.
 
-| Param | Type                | Default | Description             |
-| ----- | ------------------- | ------- | ----------------------- |
-| str   | <code>String</code> | _none_  | String for abbreviation |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The input string to be abbreviated. |
 
-```javascript
-abbreviate("You are my world"); // Yamw
+### Returns
+
+{string} - The abbreviated string.
+
+### Examples
+
+```js
+abbreviate("Hello World"); // Returns "HW"
+abbreviate(" "); // Returns ""
+abbreviate("test"); // Returns "t"
 ```
 
-### Capitalize
+## capitalize
 
-    function capitalize(str)
+Capitalizes the first letter of a string and converts the rest to lowercase.
 
-| Param | Type                | Default | Description               |
-| ----- | ------------------- | ------- | ------------------------- |
-| str   | <code>String</code> | _none_  | String for capitalization |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The input string to be capitalized. |
 
-```javascript
-capitalize("keep WORKING!!"); // Keep working!!
+### Returns
+
+{string} - The capitalized string.
+
+### Examples
+
+```js
+capitalize("hello world"); // returns "Hello world"
+capitalize("hElLo wOrLD"); // returns "Hello world"
+capitalize(" A "); // returns "A"
+capitalize(""); // returns ""
+capitalize(null); // throws Error "Invalid string served"
+capitalize(123); // throws Error "Invalid string served"
 ```
 
-### DeCapitalize
+## center
 
-    function deCapitalize(str)
+Center aligns the given string within a new string of the specified length, padded with the specified character.
 
-| Param | Type                | Default | Description                  |
-| ----- | ------------------- | ------- | ---------------------------- |
-| str   | <code>String</code> | _none_  | String for De Capitalization |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to center align. |
 
-```javascript
-deCapitalize("keep WORKING!!"); // keep WORKING!!
+| totalStringLength | {number} | _none_ | The total length of the resulting string. |
+
+| paddingCharacter | {string} | " " | The character to use for padding. Defaults to a space. |
+
+### Returns
+
+{string} - A new string of the specified length, with the original string centered and padded.
+
+### Examples
+
+```js
+center("Hello World", 20); // Returns "    Hello World     "
+center("Hello World", 20, "*"); // Returns "****Hello World*****"
 ```
 
-### escapeHTML
+## deCapitalize
 
-    function escapeHTML(str)
+De-capitalizes the first letter of a string.
 
-| Param | Type                     | Default | Description |
-| ----- | ------------------------ | ------- | ----------- |
-| str   | <code>HTML String</code> | _none_  | HTML string |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to de |
 
-```javascript
-escapeHTML("<p>keep <b>WORKING!!</b></p>"); // &lt;p&gt;keep &lt;b&gt;WORKING!!&lt;/b&gt;&lt;/p&gt;
+### Returns
+
+{string} - A new string with the first letter de
+
+### Examples
+
+```js
+deCapitalize("Hello World"); // Returns "hello World"
+deCapitalize(" "); // Returns ""
+deCapitalize("test"); // Returns "test"
 ```
 
-### first
+## endsWith
 
-    function first(str, characterCount)
+Checks if a string ends with the specified substring.
 
-| Param          | Type                | Default | Description                                          |
-| -------------- | ------------------- | ------- | ---------------------------------------------------- |
-| str            | <code>String</code> | _none_  | String                                               |
-| characterCount | <code>Number</code> | 1       | The number of characters to fetch from 0th character |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to center align. |
 
-```javascript
-first("Have a great day", 4); // Have
+| compareSubString | {string} | _none_ | The substring to compare. |
+
+### Returns
+
+{boolean} - A boolean indicating if the string ends with the specified substring.
+
+### Examples
+
+```js
+endsWith("Hello World", "World"); // Returns true
+endsWith("Hello World", "Worlds"); // Returns false
+endsWith("Hello World", " "); // Returns false
+endsWith("Hello World", "Hello World"); // Returns true
 ```
 
-### last
+## equalsIgnoreCase
 
-    function last(str, characterCount)
+Checks if two strings are equal ignoring the case.
 
-| Param          | Type                | Default | Description                                          |
-| -------------- | ------------------- | ------- | ---------------------------------------------------- |
-| str            | <code>String</code> | _none_  | String                                               |
-| characterCount | <code>Number</code> | 1       | The number of characters to fetch from 0th character |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str1 | {string} | _none_ | The first string to compare. |
 
-```javascript
-last("Have a great day", 6); // at day
+| str2 | {string} | _none_ | The second string to compare. |
+
+### Returns
+
+{boolean} - A boolean indicating if the strings are equal ignoring the case.
+
+### Examples
+
+```js
+equalsIgnoreCase("Hello World", "hello world"); // Returns true
+equalsIgnoreCase("Hello World", "hello worlds"); // Returns false
+equalsIgnoreCase("Hello World", " "); // Returns false
+equalsIgnoreCase("Hello World", "Hello World"); // Returns true
 ```
 
-### Length
+## escapeHTML
 
-    function length(str)
+Escapes HTML characters.
 
-| Param | Type                | Default | Description          |
-| ----- | ------------------- | ------- | -------------------- |
-| str   | <code>String</code> | _none_  | To get string length |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to escape. |
 
-```javascript
-length("You are my world"); // 16
+### Returns
+
+{string} - The escaped string.
+
+### Examples
+
+```js
+escapeHTML("<p>hello world</p>"); // returns "&lt;p&gt;hello world&lt;/p&gt;"
+escapeHTML("hello world"); // returns "hello world"
+escapeHTML("hello & world"); // returns "hello &amp; world"
+escapeHTML("hello < world"); // returns "hello &lt; world"
 ```
 
-### Limit
+## first
 
-    function limit(str[, strLimit[, padSide[, padString]]])
+Returns the first character of a string.
 
-| Param     | Type                | Default              | Description                                               |
-| --------- | ------------------- | -------------------- | --------------------------------------------------------- |
-| str       | <code>String</code> | _none_               | The string to be limited                                  |
-| strLimit  | <code>Number</code> | _none_               | Required string length                                    |
-| padSide   | <code>String</code> | <code>"right"</code> | Padding side: <code>"right"</code> or <code>"left"</code> |
-| padString | <code>String</code> | <code>"..."</code>   | String to pad the output with                             |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to get the first character from. |
 
-```javascript
-// Truncate:
-limit("Its a light weight package.", 20); // "Its a light weight p..."
+| characterCount | {number} | 1 | The number of characters to return. |
 
-// Pad:
-limit("This is a new line", 10, "left", "123 "); // "123 This is a"
+### Returns
+
+{string} - The first character of the string.
+
+### Examples
+
+```js
+first("Hello World"); // Returns "H"
+first(" "); // Returns ""
+first("test"); // Returns "t"
+first("Hello World", 2); // Returns "He"
 ```
 
-### pad
+## undefined
 
-    function pad(str, side, padWith)
+undefined
 
-| Param   | Type                           | Default | Description                   |
-| ------- | ------------------------------ | ------- | ----------------------------- |
-| str     | <code>String</code>            | _none_  | String                        |
-| side    | <code>right/ left/ both</code> | _none_  | The side which                |
-| padWith | <code>String</code>            | _none_  | String to pad left/right/both |
+### Parameters
 
-#### Examples
+### Returns
 
-```javascript
-pad("Have a great day", "both", "__"); // __Have a great day__
+### Examples
+
+## isAlNum
+
+Checks if the string contains only alphanumeric characters.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to check. |
+
+### Returns
+
+{boolean} - A boolean indicating if the string contains only alphanumeric characters.
+
+### Examples
+
+```js
+isAlNum("Hello World"); // Returns false
+isAlNum("HelloWorld"); // Returns true
+isAlNum("HelloWorld123"); // Returns true
+isAlNum("Hello World123"); // Returns false
 ```
 
-### replaceBy
+## isAlNum
 
-    function replaceBy(str, searchReplaceObj)
+Checks if the string contains only alphanumeric characters.
 
-| Param            | Type                | Default | Description  |
-| ---------------- | ------------------- | ------- | ------------ |
-| str              | <code>String</code> | _none_  | String       |
-| searchReplaceObj | <code>object</code> | _none_  | {key: value} |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to check. |
 
-```javascript
-replaceBy("Have a great day. Mr. {{firstName}}", { firstName: "Lion" }); // Have a great day. Mr. Lion
+### Returns
+
+{boolean} - A boolean indicating if the string contains only alphanumeric characters.
+
+### Examples
+
+```js
+isAlNum("Hello World"); // Returns false
+isAlNum("HelloWorld"); // Returns true
+isAlNum("HelloWorld123"); // Returns true
+isAlNum("Hello World123"); // Returns false
 ```
 
-### sentenceCase
+## last
 
-    function sentenceCase(str)
+Returns the last character of a string.
 
-(supports only full stops for now)
+### Parameters
 
-| Param | Type                | Default | Description |
-| ----- | ------------------- | ------- | ----------- |
-| str   | <code>String</code> | _none_  | String      |
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to get the last character from. |
 
-#### Examples
+| characterCount | {number} | 1 | The number of characters to return. |
 
-```javascript
-sentenceCase(
-  "hey charming. welcome to right place. have a great day. Feel free to use it."
-); // Hey charming. Welcome to right place. Have a great day. Feel free to use it.
+### Returns
+
+{string} - The last character of the string.
+
+### Examples
+
+```js
+last("Hello World"); // Returns "d"
+last(" "); // Returns ""
+last("test"); // Returns "t"
+last("Hello World", 2); // Returns "ld"
 ```
 
-### slugify
+## length
 
-    function slugify(str)
+Returns the length of a string.
 
-| Param | Type                | Default | Description |
-| ----- | ------------------- | ------- | ----------- |
-| str   | <code>String</code> | _none_  | String      |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to get the length of a string. |
 
-```javascript
-slugify(
-  "hey charming. welcome to right place. have a great day. Feel free to use it."
-); // hey-charming-welcome-to-right-place-have-a-great-day-feel-free-to-use-it
+### Returns
+
+{number} - The length of the string.
+
+### Examples
+
+```js
+length("Hello World"); // Returns 11
+length(" "); // Returns 1
+length("test"); // Returns 4
 ```
 
-### SubString
+## limit
 
-    function subString(str, start[, countFromStart])
+Limits the length of a string.
 
-| Param          | Type                | Default                        | Description                                      |
-| -------------- | ------------------- | ------------------------------ | ------------------------------------------------ |
-| str            | <code>String</code> | _none_                         | String to be devided                             |
-| start          | <code>Number</code> | _none_                         | Start position                                   |
-| countFromStart | <code>Number</code> | End of string from start value | The number of characters from the start position |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to limit. |
 
-```javascript
-subString("Be happy to contribute to open source", 6, 18); // "py to contribute t"
+| strLimit | {number} | _none_ | The limit of the string. |
+
+| padSide | {string} | "right" | The side to pad the string. |
+
+| padString | {string} | "..." | The string to pad the string with. |
+
+### Returns
+
+{string} - The limited string.
+
+### Examples
+
+```js
+limit("Hello World", 5); // Returns "Hello..."
+limit("Hello World", 4, "left"); // Returns "...Hello "
+limit("Hello World", 4, "left", "!!!"); // Returns "!!!Hello"
 ```
 
-### titleCase
+## pad
 
-    function titleCase(str)
+Pads a string with another string.
 
-| Param | Type                | Default | Description |
-| ----- | ------------------- | ------- | ----------- |
-| str   | <code>String</code> | _none_  | String      |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to pad. |
 
-```javascript
-titleCase(
-  "hey charming. welcome to right place. have a great day. Feel free to use it."
-); // Hey Charming. Welcome To Right Place. Have A Great Day. Feel Free To Use It.
+| side | {string} | _none_ | The side to pad the string (left | right | both). |
+
+| padWith | {string} | _none_ | The string to pad the string with. |
+
+### Returns
+
+{string} - The padded string.
+
+### Examples
+
+```js
+pad("Hello World", "left", "!!!"); // Returns "!!!Hello World"
+pad("Hello World", "right", "!!!"); // Returns "Hello World!!!"
+pad("Hello World", "both", "!!!"); // Returns "!!!Hello World!!!"
+pad("Hello World", "both"); // Returns "Hello World"
 ```
 
-### ToArray
+## replaceBy
 
-    function toArray(str)
+Replaces all the occurrences of a string with another string.
 
-| Param | Type                | Default | Description                     |
-| ----- | ------------------- | ------- | ------------------------------- |
-| str   | <code>String</code> | _none_  | String to be converted to array |
+### Parameters
 
-#### Examples
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to replace. |
 
-```javascript
-toArray("This is a good day"); // "['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 'g', 'o', 'o', 'd', ' ', 'd', 'a', 'y']"
+| searchReplaceObj | {string} | _none_ | The object containing the search and replace strings. |
+
+### Returns
+
+{string} - The replaced string.
+
+### Examples
+
+```js
+replaceBy("Hello World", { "{{{Hello}}}": "Hi", "{{{World}}": "Earth" }); // Returns "Hi Earth"
+replaceBy("Hello World", { "{{{Hello}}}": "Hi" }); // Returns "Hi World"
+replaceBy("Hello World", {
+  "{{{Hello}}}": "Hi",
+  "{{{World}}": "Earth",
+  "{{{Earth}}}": "World",
+}); // Returns "Hi World"
 ```
+
+## sentenceCase
+
+Converts a string to sentence case.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to convert. |
+
+### Returns
+
+{string} - The converted string.
+
+### Examples
+
+```js
+sentenceCase("hello world"); // Returns "Hello world"
+sentenceCase("hello world."); // Returns "Hello world."
+```
+
+## slugify
+
+Converts a string to a slug.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to convert. |
+
+### Returns
+
+{string} - The converted string.
+
+### Examples
+
+```js
+slugify("Hello World"); // Returns "hello-world"
+slugify("Hello World!"); // Returns "hello-world"
+slugify("Hello World!@#$%^&*()"); // Returns "hello-world"
+```
+
+## subString
+
+Returns a substring of a string.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to get the substring from. |
+
+| start | {number} | 0 | The index to start the substring from. |
+
+| countFromStart | {number} | undefined | The number of characters to return. |
+
+### Returns
+
+{string} - The substring of the string.
+
+### Examples
+
+```js
+subString("Hello World"); // Returns "Hello World"
+subString(" "); // Returns " "
+subString("Hello World", 2); // Returns "llo World"
+subString("Hello World", 2, 3); // Returns "llo"
+```
+
+## titleCase
+
+Converts a string to title case.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to convert. |
+
+### Returns
+
+{string} - The converted string.
+
+### Examples
+
+```js
+titleCase("hello world"); // Returns "Hello World"
+titleCase("hello world!@#$%^&*()"); // Returns "Hello World!@#$%^&*()"
+```
+
+## toArray
+
+Converts a string to an array.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| str | {string} | _none_ | The string to convert. |
+
+| explodeBy | {string} | "" | The separator to use. |
+
+### Returns
+
+{string[]} - The converted string.
+
+### Examples
+
+```js
+toArray("Hello World", " "); // Returns ["Hello", "World"]
+toArray("test"); // Returns ["t", "e", "s", "t"]
+```
+
+[//]: END GENERATED CODE
 
 ## Test
 
