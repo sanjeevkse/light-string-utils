@@ -12,7 +12,7 @@
  * @example limit("Hello World", 4, "left", "!!!"); // Returns "!!!Hello"
  */
 
-const length = require("./length");
+const length = require("../length");
 
 function limit(str, strLimit, padSide = "right", padString = "...") {
   // Check for input types

@@ -12,7 +12,7 @@
  * @example subString("Hello World", 2, 3); // Returns "llo"
  */
 
-const length = require("./length");
+const length = require("../length");
 
 function subString(str, start = 0, countFromStart = undefined) {
   if (typeof str !== "string") {
