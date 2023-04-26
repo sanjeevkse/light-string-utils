@@ -1,6 +1,6 @@
 {
   "name": "light-string-utils",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "A low-level utility library delivering consistency, customization, performance, and extra features for strings",
   "main": "src/index.js",
   "scripts": {
