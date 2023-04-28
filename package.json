@@ -40,7 +40,7 @@
   "homepage": "https://github.com/sanjeevkse/light-string-utils",
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run doc"
     }
   }
 }
