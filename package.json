@@ -1,8 +1,8 @@
 {
   "name": "light-string-utils",
-  "version": "1.6.5",
+  "version": "1.7.0",
   "description": "A low-level utility library delivering consistency, customization, performance, and extra features for strings",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest src/**/*.test.js --coverage",
     "doc": "node generateReadMe/index.js",
