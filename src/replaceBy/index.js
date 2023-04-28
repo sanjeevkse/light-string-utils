@@ -5,9 +5,9 @@
  * @param {string} searchReplaceObj - _none_ - The object containing the search and replace strings.
  * @returns {string} - The replaced string.
  * @throws {Error} - Throws an error if the input is not a string or search replace object is not shared.
- * @example replaceBy("{{{Hello World}}}", { "Hello": "Hi", "World": "Earth" }); // Returns "Hi Earth"
- * @example replaceBy("{{{Hello World}}}", { "Hello": "Hi" }); // Returns "Hi World"
- * @example replaceBy("{{{Hello World}}}", { "Hello": "Hi", "World": "Earth", "Earth": "World" }); // Returns "Hi World"
+ * @example replaceBy("{{{Hello}}} {{{World}}}", { "Hello": "Hi", "World": "Earth" }); // Returns "Hi Earth"
+ * @example replaceBy("{{{Hello}}} World", { "Hello": "Hi" }); // Returns "Hi World"
+ * @example replaceBy("{{{Hello}}} {{{World}}}", { "Hello": "Hi", "World": "Earth", "Earth": "World" }); // Returns "Hi World"
  */
 
 function replaceBy(str, searchReplaceObj) {
