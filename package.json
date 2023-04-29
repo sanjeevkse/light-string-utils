@@ -1,6 +1,6 @@
 {
   "name": "light-string-utils",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "A low-level utility library delivering consistency, customization, performance, and extra features for strings",
   "main": "index.js",
   "scripts": {
@@ -42,5 +42,11 @@
     "ghooks": {
       "pre-commit": "npm run test && npm run doc"
     }
-  }
+  },
+  "files": [
+    "index.js",
+    "src/**/index.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
