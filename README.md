@@ -50,6 +50,7 @@ const { length } = require("light-string-utils");
 - [`last()`](#last)
 - [`length()`](#length)
 - [`limit()`](#limit)
+- [`occurance()`](#occurance)
 - [`pad()`](#pad)
 - [`replaceBy()`](#replaceBy)
 - [`sentenceCase()`](#sentenceCase)
@@ -359,6 +360,30 @@ Limits the length of a string.
 limit("Hello World", 5); // Returns "Hello..."
 limit("Hello World", 4, "left"); // Returns "...Hello "
 limit("Hello World", 4, "left", "!!!"); // Returns "!!!Hello"
+```
+
+## occurance
+
+Returns the indices of the finding string in the input string.
+
+
+### Parameters
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| str | {string} | _none_ | The input string (target string). |
+| findStr | {string} | _none_ | The finding string. |
+| caseSensitive | {string} | false | Should it be case sensitive or in |
+### Returns
+
+{number[]} - The starting indices of the occurances. 
+
+### Examples
+
+```js
+occurance("Hello World!!, Hello all", "Hellow"); // Returns "HW"
+occurance("You are great as usual", " "); // Returns ""
+occurance("Contributing to the open source encourages mutual side benefits"); // Returns "t"
 ```
 
 ## pad
