@@ -381,9 +381,9 @@ Returns the indices of the finding string in the input string.
 ### Examples
 
 ```js
-occurance("Hello World!!, Hello all", "Hellow"); // Returns "HW"
-occurance("You are great as usual", " "); // Returns ""
-occurance("Contributing to the open source encourages mutual side benefits"); // Returns "t"
+occurance("Hello World!!, Hello all", "Hellow"); // Returns []
+occurance("You are great as usual", " "); // Returns [3, 7, 13, 16]
+occurance("Contributing to the open source encourages mutual side benefits"); // Returns [3, 8, 13, 16, 45, 61]
 ```
 
 ## pad

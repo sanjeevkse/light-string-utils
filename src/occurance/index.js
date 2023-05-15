@@ -7,9 +7,9 @@
 @param {string} caseSensitive - false - Should it be case sensitive or in-sensitive.
 @returns {number[]} - The starting indices of the occurances.
 @throws {Error} - Throws an error if the inputs are invalid.
-@example occurance("Hello World!!, Hello all", "Hellow"); // Returns "HW"
-@example occurance("You are great as usual", " "); // Returns ""
-@example occurance("Contributing to the open source encourages mutual side benefits"); // Returns "t"
+@example occurance("Hello World!!, Hello all", "Hellow"); // Returns []
+@example occurance("You are great as usual", " "); // Returns [3, 7, 13, 16]
+@example occurance("Contributing to the open source encourages mutual side benefits"); // Returns [3, 8, 13, 16, 45, 61]
 */
 
 function occurance(str, findStr, caseSensitive = false) {
