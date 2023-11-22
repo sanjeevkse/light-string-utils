@@ -52,6 +52,7 @@ const { length } = require("light-string-utils");
 - [`limit()`](#limit)
 - [`occurance()`](#occurance)
 - [`pad()`](#pad)
+- [`repeat()`](#repeat)
 - [`replaceBy()`](#replaceBy)
 - [`sentenceCase()`](#sentenceCase)
 - [`slugify()`](#slugify)
@@ -409,6 +410,30 @@ pad("Hello World", "left", "!!!"); // Returns "!!!Hello World"
 pad("Hello World", "right", "!!!"); // Returns "Hello World!!!"
 pad("Hello World", "both", "!!!"); // Returns "!!!Hello World!!!"
 pad("Hello World", "both"); // Returns "Hello World"
+```
+
+## repeat
+
+repeats a string by defined times.
+
+
+### Parameters
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| item | {item} | _none_ | The input string/number to be repeated. |
+| times | {number} | 1 | The number of times to repeat the string. |
+| delimiter | {string} | "" | The delimiter to be used between the repeated strings. |
+### Returns
+
+{string} - The repeated string. 
+
+### Examples
+
+```js
+repeat("san"); // Returns "san"
+repeat("san", 4); // Returns "sansansansan"
+repeat("test ", 2); // Returns "test test"
 ```
 
 ## replaceBy
