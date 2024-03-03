@@ -59,6 +59,7 @@ const { length } = require("light-string-utils");
 - [`subString()`](#subString)
 - [`titleCase()`](#titleCase)
 - [`toArray()`](#toArray)
+- [`worldCount()`](#worldCount)
 ## abbreviate
 
 Abbreviates a string by returning the first character of each word.
@@ -568,6 +569,28 @@ Converts a string to an array.
 ```js
 toArray("Hello World", " "); // Returns ["Hello", "World"]
 toArray("test"); // Returns ["t", "e", "s", "t"]
+```
+
+## worldCount
+
+Counts the number of words seperated by spaces or the given seperator.
+
+
+### Parameters
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| str | {string} | _none_ | The string to convert. |
+| explodeBy | {string} | "" | The separator to use. |
+### Returns
+
+{number} - The word count. 
+
+### Examples
+
+```js
+worldCount("Hello World", " "); // Returns 2
+wc("test me!"); // Returns 2
 ```
 
 
