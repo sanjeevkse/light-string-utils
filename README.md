@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/light-string-utils.svg?orange=blue)](https://www.npmjs.com/package/light-string-utils)
 [![npm](https://img.shields.io/npm/l/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils)
 [![npm](https://img.shields.io/npm/dm/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils)
-![Coverage Badge](./coverage-badge.md)
+[![Coverage Status](https://coveralls.io/repos/github/sanjeevkse/light-string-utils/badge.svg?branch=main)](https://coveralls.io/github/sanjeevkse/light-string-utils?branch=main)
 
 A light weight utility collection on string. Without any external dependencies.
 
