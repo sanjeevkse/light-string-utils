@@ -26,14 +26,13 @@ jobs:
       run: npm run test -- --coverage
 
     - name: Upload coverage to Coveralls
-      uses: coverallsapp/github-action@v1
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: ./coverage/lcov.info
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      run: npx coveralls < ./coverage/lcov.info
 
     - name: Create coverage badge
       run: |
-        COVERAGE=$(npx coveralls < ./coverage/lcov.info | grep -o 'https://img.shields.io/badge/coverage-[^"]*')
+        COVERAGE=$(curl -s https://coveralls.io/repos/github/${{ github.repository }}/badge.svg?branch=main)
         echo "![Coverage Badge]($COVERAGE)" > coverage-badge.md
         cat coverage-badge.md
         cp coverage-badge.md ./coverage-badge.md
