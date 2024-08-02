@@ -1,8 +1,10 @@
 # Light String Utils
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20-a%20coffee-048754?logo=buymeacoffee)](https://buymeacoffee.com/sanjeevkse4)
 [![npm](https://img.shields.io/npm/v/light-string-utils.svg?orange=blue)](https://www.npmjs.com/package/light-string-utils)
 [![npm](https://img.shields.io/npm/l/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils)
 [![npm](https://img.shields.io/npm/dm/light-string-utils.svg)](https://www.npmjs.com/package/light-string-utils)
+![Coverage Badge](./coverage-badge.md)
 
 A light weight utility collection on string. Without any external dependencies.
 
@@ -37,6 +39,7 @@ const { length } = require("light-string-utils");
 ```
 
 [//]: START GENERATED CODE
+
 - [`abbreviate()`](#abbreviate)
 - [`capitalize()`](#capitalize)
 - [`center()`](#center)
@@ -60,19 +63,20 @@ const { length } = require("light-string-utils");
 - [`titleCase()`](#titleCase)
 - [`toArray()`](#toArray)
 - [`worldCount()`](#worldCount)
+
 ## abbreviate
 
 Abbreviates a string by returning the first character of each word.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The input string to be abbreviated. |
+| Name | Type     | Default | Description                         |
+| ---- | -------- | ------- | ----------------------------------- |
+| str  | {string} | _none_  | The input string to be abbreviated. |
+
 ### Returns
 
-{string} - The abbreviated string. 
+{string} - The abbreviated string.
 
 ### Examples
 
@@ -86,15 +90,15 @@ abbreviate("test"); // Returns "t"
 
 Capitalizes the first letter of a string and converts the rest to lowercase.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The input string to be capitalized. |
+| Name | Type     | Default | Description                         |
+| ---- | -------- | ------- | ----------------------------------- |
+| str  | {string} | _none_  | The input string to be capitalized. |
+
 ### Returns
 
-{string} - The capitalized string. 
+{string} - The capitalized string.
 
 ### Examples
 
@@ -111,17 +115,17 @@ capitalize(123); // throws Error "Invalid string served"
 
 Center aligns the given string within a new string of the specified length, padded with the specified character.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to center align. |
-| totalStringLength | {number} | _none_ | The total length of the resulting string. |
-| paddingCharacter | {string} | " " | The character to use for padding. Defaults to a space. |
+| Name              | Type     | Default | Description                                            |
+| ----------------- | -------- | ------- | ------------------------------------------------------ |
+| str               | {string} | _none_  | The string to center align.                            |
+| totalStringLength | {number} | _none_  | The total length of the resulting string.              |
+| paddingCharacter  | {string} | " "     | The character to use for padding. Defaults to a space. |
+
 ### Returns
 
-{string} - A new string of the specified length, with the original string centered and padded. 
+{string} - A new string of the specified length, with the original string centered and padded.
 
 ### Examples
 
@@ -134,15 +138,15 @@ center("Hello World", 20, "*"); // Returns "****Hello World*****"
 
 De-capitalizes the first letter of a string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to de |
+| Name | Type     | Default | Description      |
+| ---- | -------- | ------- | ---------------- |
+| str  | {string} | _none_  | The string to de |
+
 ### Returns
 
-{string} - A new string with the first letter de 
+{string} - A new string with the first letter de
 
 ### Examples
 
@@ -156,16 +160,16 @@ deCapitalize("test"); // Returns "test"
 
 Checks if a string ends with the specified substring.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to center align. |
-| compareSubString | {string} | _none_ | The substring to compare. |
+| Name             | Type     | Default | Description                 |
+| ---------------- | -------- | ------- | --------------------------- |
+| str              | {string} | _none_  | The string to center align. |
+| compareSubString | {string} | _none_  | The substring to compare.   |
+
 ### Returns
 
-{boolean} - A boolean indicating if the string ends with the specified substring. 
+{boolean} - A boolean indicating if the string ends with the specified substring.
 
 ### Examples
 
@@ -180,16 +184,16 @@ endsWith("Hello World", "Hello World"); // Returns true
 
 Checks if two strings are equal ignoring the case.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str1 | {string} | _none_ | The first string to compare. |
-| str2 | {string} | _none_ | The second string to compare. |
+| Name | Type     | Default | Description                   |
+| ---- | -------- | ------- | ----------------------------- |
+| str1 | {string} | _none_  | The first string to compare.  |
+| str2 | {string} | _none_  | The second string to compare. |
+
 ### Returns
 
-{boolean} - A boolean indicating if the strings are equal ignoring the case. 
+{boolean} - A boolean indicating if the strings are equal ignoring the case.
 
 ### Examples
 
@@ -204,15 +208,15 @@ equalsIgnoreCase("Hello World", "Hello World"); // Returns true
 
 Escapes HTML characters.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to escape. |
+| Name | Type     | Default | Description           |
+| ---- | -------- | ------- | --------------------- |
+| str  | {string} | _none_  | The string to escape. |
+
 ### Returns
 
-{string} - The escaped string. 
+{string} - The escaped string.
 
 ### Examples
 
@@ -227,16 +231,16 @@ escapeHTML("hello < world"); // returns "hello &lt; world"
 
 Returns the first character of a string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to get the first character from. |
-| characterCount | {number} | 1 | The number of characters to return. |
+| Name           | Type     | Default | Description                                 |
+| -------------- | -------- | ------- | ------------------------------------------- |
+| str            | {string} | _none_  | The string to get the first character from. |
+| characterCount | {number} | 1       | The number of characters to return.         |
+
 ### Returns
 
-{string} - The first character of the string. 
+{string} - The first character of the string.
 
 ### Examples
 
@@ -251,15 +255,15 @@ first("Hello World", 2); // Returns "He"
 
 Checks if the string contains only alphanumeric characters.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to check. |
+| Name | Type     | Default | Description          |
+| ---- | -------- | ------- | -------------------- |
+| str  | {string} | _none_  | The string to check. |
+
 ### Returns
 
-{boolean} - A boolean indicating if the string contains only alphanumeric characters. 
+{boolean} - A boolean indicating if the string contains only alphanumeric characters.
 
 ### Examples
 
@@ -274,15 +278,15 @@ isAlNum("Hello World123"); // Returns false
 
 Checks if the string contains only alphanumeric characters.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to check. |
+| Name | Type     | Default | Description          |
+| ---- | -------- | ------- | -------------------- |
+| str  | {string} | _none_  | The string to check. |
+
 ### Returns
 
-{boolean} - A boolean indicating if the string contains only alphanumeric characters. 
+{boolean} - A boolean indicating if the string contains only alphanumeric characters.
 
 ### Examples
 
@@ -297,16 +301,16 @@ isAlpha("Hello World123"); // Returns false
 
 Returns the last character of a string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to get the last character from. |
-| characterCount | {number} | 1 | The number of characters to return. |
+| Name           | Type     | Default | Description                                |
+| -------------- | -------- | ------- | ------------------------------------------ |
+| str            | {string} | _none_  | The string to get the last character from. |
+| characterCount | {number} | 1       | The number of characters to return.        |
+
 ### Returns
 
-{string} - The last character of the string. 
+{string} - The last character of the string.
 
 ### Examples
 
@@ -321,15 +325,15 @@ last("Hello World", 2); // Returns "ld"
 
 Returns the length of a string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to get the length of a string. |
+| Name | Type     | Default | Description                               |
+| ---- | -------- | ------- | ----------------------------------------- |
+| str  | {string} | _none_  | The string to get the length of a string. |
+
 ### Returns
 
-{number} - The length of the string. 
+{number} - The length of the string.
 
 ### Examples
 
@@ -343,18 +347,18 @@ length("test"); // Returns 4
 
 Limits the length of a string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to limit. |
-| strLimit | {number} | _none_ | The limit of the string. |
-| padSide | {string} | "right" | The side to pad the string. |
-| padString | {string} | "..." | The string to pad the string with. |
+| Name      | Type     | Default | Description                        |
+| --------- | -------- | ------- | ---------------------------------- |
+| str       | {string} | _none_  | The string to limit.               |
+| strLimit  | {number} | _none_  | The limit of the string.           |
+| padSide   | {string} | "right" | The side to pad the string.        |
+| padString | {string} | "..."   | The string to pad the string with. |
+
 ### Returns
 
-{string} - The limited string. 
+{string} - The limited string.
 
 ### Examples
 
@@ -368,17 +372,17 @@ limit("Hello World", 4, "left", "!!!"); // Returns "!!!Hello"
 
 Returns the indices of the finding string in the input string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The input string (target string). |
-| findStr | {string} | _none_ | The finding string. |
-| caseSensitive | {string} | false | Should it be case sensitive or in |
+| Name          | Type     | Default | Description                       |
+| ------------- | -------- | ------- | --------------------------------- |
+| str           | {string} | _none_  | The input string (target string). |
+| findStr       | {string} | _none_  | The finding string.               |
+| caseSensitive | {string} | false   | Should it be case sensitive or in |
+
 ### Returns
 
-{number[]} - The starting indices of the occurances. 
+{number[]} - The starting indices of the occurances.
 
 ### Examples
 
@@ -392,17 +396,17 @@ occurance("Contributing to the open source encourages mutual side benefits"); //
 
 Pads a string with another string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to pad. |
-| side | {string} | _none_ | The side to pad the string (left | right | both). |
-| padWith | {string} | _none_ | The string to pad the string with. |
+| Name    | Type     | Default | Description                        |
+| ------- | -------- | ------- | ---------------------------------- | ----- | ------ |
+| str     | {string} | _none_  | The string to pad.                 |
+| side    | {string} | _none_  | The side to pad the string (left   | right | both). |
+| padWith | {string} | _none_  | The string to pad the string with. |
+
 ### Returns
 
-{string} - The padded string. 
+{string} - The padded string.
 
 ### Examples
 
@@ -417,17 +421,17 @@ pad("Hello World", "both"); // Returns "Hello World"
 
 repeats a string by defined times.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| item | {item} | _none_ | The input string/number to be repeated. |
-| times | {number} | 1 | The number of times to repeat the string. |
-| delimiter | {string} | "" | The delimiter to be used between the repeated strings. |
+| Name      | Type     | Default | Description                                            |
+| --------- | -------- | ------- | ------------------------------------------------------ |
+| item      | {item}   | _none_  | The input string/number to be repeated.                |
+| times     | {number} | 1       | The number of times to repeat the string.              |
+| delimiter | {string} | ""      | The delimiter to be used between the repeated strings. |
+
 ### Returns
 
-{string} - The repeated string. 
+{string} - The repeated string.
 
 ### Examples
 
@@ -441,38 +445,42 @@ repeat("test ", 2); // Returns "test test"
 
 Replaces all the occurrences of a string with another string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to replace. |
-| searchReplaceObj | {string} | _none_ | The object containing the search and replace strings. |
+| Name             | Type     | Default | Description                                           |
+| ---------------- | -------- | ------- | ----------------------------------------------------- |
+| str              | {string} | _none_  | The string to replace.                                |
+| searchReplaceObj | {string} | _none_  | The object containing the search and replace strings. |
+
 ### Returns
 
-{string} - The replaced string. 
+{string} - The replaced string.
 
 ### Examples
 
 ```js
-replaceBy("{{{Hello}}} {{{World}}}", { "Hello": "Hi", "World": "Earth" }); // Returns "Hi Earth"
-replaceBy("{{{Hello}}} World", { "Hello": "Hi" }); // Returns "Hi World"
-replaceBy("{{{Hello}}} {{{World}}}", { "Hello": "Hi", "World": "Earth", "Earth": "World" }); // Returns "Hi World"
+replaceBy("{{{Hello}}} {{{World}}}", { Hello: "Hi", World: "Earth" }); // Returns "Hi Earth"
+replaceBy("{{{Hello}}} World", { Hello: "Hi" }); // Returns "Hi World"
+replaceBy("{{{Hello}}} {{{World}}}", {
+  Hello: "Hi",
+  World: "Earth",
+  Earth: "World",
+}); // Returns "Hi World"
 ```
 
 ## sentenceCase
 
 Converts a string to sentence case.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
+
 ### Returns
 
-{string} - The converted string. 
+{string} - The converted string.
 
 ### Examples
 
@@ -485,15 +493,15 @@ sentenceCase("hello world."); // Returns "Hello world."
 
 Converts a string to a slug.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
+
 ### Returns
 
-{string} - The converted string. 
+{string} - The converted string.
 
 ### Examples
 
@@ -507,17 +515,17 @@ slugify("Hello World!@#$%^&*()"); // Returns "hello-world"
 
 Returns a substring of a string.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to get the substring from. |
-| start | {number} | 0 | The index to start the substring from. |
-| countFromStart | {number} | undefined | The number of characters to return. |
+| Name           | Type     | Default   | Description                            |
+| -------------- | -------- | --------- | -------------------------------------- |
+| str            | {string} | _none_    | The string to get the substring from.  |
+| start          | {number} | 0         | The index to start the substring from. |
+| countFromStart | {number} | undefined | The number of characters to return.    |
+
 ### Returns
 
-{string} - The substring of the string. 
+{string} - The substring of the string.
 
 ### Examples
 
@@ -532,15 +540,15 @@ subString("Hello World", 2, 3); // Returns "llo"
 
 Converts a string to title case.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to convert. |
+| Name | Type     | Default | Description            |
+| ---- | -------- | ------- | ---------------------- |
+| str  | {string} | _none_  | The string to convert. |
+
 ### Returns
 
-{string} - The converted string. 
+{string} - The converted string.
 
 ### Examples
 
@@ -553,16 +561,16 @@ titleCase("hello world!@#$%^&*()"); // Returns "Hello World!@#$%^&*()"
 
 Converts a string to an array.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to convert. |
-| explodeBy | {string} | "" | The separator to use. |
+| Name      | Type     | Default | Description            |
+| --------- | -------- | ------- | ---------------------- |
+| str       | {string} | _none_  | The string to convert. |
+| explodeBy | {string} | ""      | The separator to use.  |
+
 ### Returns
 
-{string[]} - The converted string. 
+{string[]} - The converted string.
 
 ### Examples
 
@@ -575,16 +583,16 @@ toArray("test"); // Returns ["t", "e", "s", "t"]
 
 Counts the number of words seperated by spaces or the given seperator.
 
-
 ### Parameters
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| str | {string} | _none_ | The string to convert. |
-| explodeBy | {string} | "" | The separator to use. |
+| Name      | Type     | Default | Description            |
+| --------- | -------- | ------- | ---------------------- |
+| str       | {string} | _none_  | The string to convert. |
+| explodeBy | {string} | ""      | The separator to use.  |
+
 ### Returns
 
-{number} - The word count. 
+{number} - The word count.
 
 ### Examples
 
@@ -592,7 +600,6 @@ Counts the number of words seperated by spaces or the given seperator.
 worldCount("Hello World", " "); // Returns 2
 wc("test me!"); // Returns 2
 ```
-
 
 [//]: END GENERATED CODE
 
