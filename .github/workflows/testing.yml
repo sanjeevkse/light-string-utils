@@ -32,10 +32,9 @@ jobs:
 
     - name: Create coverage badge
       run: |
-        COVERAGE=$(curl -s https://coveralls.io/repos/github/${{ github.repository }}/badge.svg?branch=main)
-        echo "![Coverage Badge]($COVERAGE)" > coverage-badge.md
+        BADGE_URL="https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_96.svg"
+        echo "![Coverage Badge]($BADGE_URL)" > coverage-badge.md
         cat coverage-badge.md
-        cp coverage-badge.md ./coverage-badge.md
 
     - name: Commit coverage badge
       run: |
